@@ -1,0 +1,11 @@
+setGroup,order,q,enabled,assertType,expected
+VB_134_Ensure,1,เปิดบัญชี CLICX ต้องทำอย่างไร,TRUE,contains_any,เปิดบัญชี||สมัคร
+VB_134_Ensure,2,ต้องใช้อะไรบ้างในการเปิดบัญชี,TRUE,contains_any,เอกสาร||บัตรประชาชน
+VB_134_Ensure,3,ยืนยันตัวตนได้ช่องทางไหน,TRUE,contains_any,ยืนยันตัวตน||KYC
+VB_134_Ensure,4,ถ้าลืมรหัสผ่านต้องทำอย่างไร,TRUE,contains_any,รีเซ็ต||รหัสผ่าน
+VB_134_Ensure,5,ติดต่อเจ้าหน้าที่ได้อย่างไร,TRUE,contains_any,เจ้าหน้าที่||คอลเซ็นเตอร์
+VB_134_Ensure,6,เวลาทำการของเจ้าหน้าที่คือเมื่อไหร่,TRUE,regex,(จันทร์|Mon).*(ศุกร์|Fri)
+VB_134_Ensure,7,มีค่าธรรมเนียมรายปีหรือไม่,TRUE,contains_any,ค่าธรรมเนียม||ฟรี
+VB_134_Ensure,8,เปลี่ยนเบอร์โทรในระบบได้ไหม,TRUE,contains_any,เปลี่ยน||เบอร์
+VB_134_Ensure,9,ขอ statement ย้อนหลังได้ไหม,TRUE,contains_any,statement||ใบแจ้งยอด
+VB_134_Ensure,10,ถ้าทำรายการไม่สำเร็จต้องทำอย่างไร,TRUE,contains_any,ตรวจสอบ||ทำรายการใหม่

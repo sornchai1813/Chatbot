@@ -1,0 +1,6 @@
+npx playwright test --headed --repeat-each=3 --workers=3
+npx playwright test tests/sprinklr-test.spec.js --headed --repeat-each=3 --workers=3
+npx playwright test tests/sprinklr-test.spec.js --headed
+
+
+#69784
