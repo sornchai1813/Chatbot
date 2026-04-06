@@ -214,19 +214,19 @@ test('CLICX Chatbot Automation - Stable v2.0', async ({ page }, testInfo) => {
 
   await page.waitForTimeout(runConfig.waits.afterExpandUiMs);
 
-  await chat.evaluate(async (el) => {
-    for (let y = 0; y <= el.scrollHeight; y += runConfig.screenshot.scrubStepPx) {
+  await chat.evaluate(async (el, scrubStepPx) => {
+    for (let y = 0; y <= el.scrollHeight; y += scrubStepPx) {
       el.scrollTop = y;
       await new Promise((r) => setTimeout(r, 100));
     }
 
-    for (let y = el.scrollHeight; y >= 0; y -= runConfig.screenshot.scrubStepPx) {
+    for (let y = el.scrollHeight; y >= 0; y -= scrubStepPx) {
       el.scrollTop = y;
       await new Promise((r) => setTimeout(r, 120));
     }
 
     el.scrollTop = 0;
-  }).catch(() => null);
+  }, runConfig.screenshot.scrubStepPx).catch(() => null);
 
   await page.waitForTimeout(runConfig.waits.afterScrubMs);
 
@@ -251,6 +251,8 @@ test('CLICX Chatbot Automation - Stable v2.0', async ({ page }, testInfo) => {
   await chatBody.screenshot({ path: finalPath, animations: 'disabled' });
 
   console.log(`🏁 ${roundLabel}: เสร็จสิ้น case ${caseNumber} | CSV: Log_${caseNumber}.csv | PNG: ${caseNumber}.png`);
-  await page.pause(); 
+  if (process.env.PAUSE_AT_END === 'true') {
+    await page.pause();
+  }
 });
 

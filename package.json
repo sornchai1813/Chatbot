@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:chatbot": "playwright test tests/sprinklr-testchatbot.spec.js --project=chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

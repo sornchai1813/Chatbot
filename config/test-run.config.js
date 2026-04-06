@@ -2,7 +2,7 @@ module.exports = {
 	setGroup: process.env.SET_GROUP || '*',
 	questionSource: process.env.QUESTION_SOURCE || 'sheet',
 	sheetStrict: process.env.SHEET_STRICT !== 'false',
-	maxParallelGroups: Number(process.env.MAX_PARALLEL_GROUPS || 3),
+	maxParallelGroups: Number(process.env.MAX_PARALLEL_GROUPS || 5),
 
 	chat: {
 		url: process.env.CHAT_URL || 'https://live-chat-static.sprinklr.com/test-html/index.html?appId=6950dbcf3047873387304feb_app_1111009341&env=prod11&skin=MODERN&locale=th',
