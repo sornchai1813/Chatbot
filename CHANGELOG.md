@@ -18,6 +18,16 @@
 - (เติมรายการฟีเจอร์ใหม่ของ test10)
 
 ### fix
+
+## [9.0.0] - 2026-04-07
+### feat
+- โหลดคำถามจาก Google Sheet ผ่าน CSV export
+- รองรับ setGroup หลายกลุ่ม รัน parallel ได้
+- บันทึกผลลัพธ์เป็น CSV และ PNG screenshot อัตโนมัติ
+- ตั้ง maxParallelGroups ผ่าน config
+
+### chore
+- ไฟล์หลัก: sandbox/sprinklr-test9.spec.js
 - (เติมรายการแก้บั๊กของ test10)
 
 ### refactor
